@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subida masiva de facturas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <h1>Sistema de subida masiva de facturas para Patri ❤️</h1>
+
+    <div class="content-box horizontal-inputs">
+        <div class="input-group">
+            <label for="csvFile">Archivo CSV</label>
+            <label class="custom-file-upload" for="csvFile">Seleccionar archivo</label>
+            <input type="file" id="csvFile" accept=".csv" onchange="updateFileName()">
+            <span id="fileName" class="file-name"></span>
+        </div>
+        <div class="input-group">
+            <label for="apiKeyInput">API Key
+                <span class="tooltip-icon" data-tooltip="Después de introducirlo una vez, se cargará automáticamente en este navegador cada vez que accedas">
+                    <span class="info-icon">i</span>
+                </span>
+            </label>
+            <input type="text" id="apiKeyInput" placeholder="Introduce la API Key">
+        </div>
+    </div>
+
+    <div class="content-box">
+        <button id="loadCsvButton">Cargar CSV</button>
+        <button id="createInvoicesButton">Crear facturas</button>
+    </div>
+    
+    <div class="content-box" id="tableContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
